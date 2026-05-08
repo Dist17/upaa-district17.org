@@ -6,55 +6,67 @@
     <title>UPAA District 17 | Alcoholics Anonymous</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: system-ui, sans-serif; }
-        .hero { background: linear-gradient(#001a33, #000d1a); color: white; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-bg { 
+            background: linear-gradient(180deg, #001a33 0%, #000d1a 100%); 
+            position: relative; 
+            overflow: hidden;
+            height: 90vh;
+        }
+        .section-header { font-family: 'Playfair Display', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-slate-800">
 
-    <nav class="bg-white shadow p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="text-3xl">🔷</span>
-                <div>
-                    <h1 class="text-2xl font-bold text-[#003366]">UPAA District 17</h1>
-                    <p class="text-sm text-slate-500">Upper Peninsula • Area 74</p>
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-x-4">
+                    <img src="https://i.imgur.com/0vO5v9k.png" alt="UPAA District 17 Logo" class="w-16 h-16 object-contain">
+                    <div>
+                        <h1 class="text-2xl font-semibold text-[#003366]">UPAA District 17</h1>
+                        <p class="text-xs text-slate-500">Upper Peninsula • Area 74</p>
+                    </div>
                 </div>
-            </div>
-            <div class="flex gap-6">
-                <a href="#meetings" class="font-medium">Meetings</a>
-                <a href="minutes.html" class="font-medium">Minutes</a>
-                <a href="#contact" class="font-medium">Contact</a>
+                <div class="flex gap-x-8 text-sm font-medium">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About AA</a>
+                    <a href="#meetings" class="nav-link">Meetings</a>
+                    <a href="minutes.html" class="nav-link">Meeting Minutes</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header class="hero py-32 text-center">
-        <h1 class="text-5xl font-bold mb-4">UPAA DISTRICT 17</h1>
-        <p class="text-2xl mb-6">Alcoholics Anonymous</p>
-        <p class="text-xl">24/7 Helpline: <a href="tel:906-774-0900" class="underline">906-774-0900</a></p>
+    <!-- HERO -->
+    <header id="home" class="hero-bg flex items-center text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6">UPAA DISTRICT 17</h1>
+            <p class="text-2xl md:text-3xl mb-8">Alcoholics Anonymous</p>
+            <p class="text-xl">24/7 AA Helpline: <a href="tel:906-774-0900" class="underline font-semibold">906-774-0900</a></p>
+        </div>
     </header>
 
+    <!-- MEETINGS SUMMARY -->
     <section id="meetings" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Meeting Schedule</h2>
-            <p class="text-lg">Full meeting list coming soon...</p>
-            <p class="mt-8">
-                <a href="minutes.html" class="text-blue-600 underline">View April 2026 Minutes →</a>
-            </p>
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="section-header text-4xl font-bold text-[#003366] mb-8">Meeting Schedule</h2>
+            <p class="text-lg mb-8">View our full list of meetings across the Upper Peninsula</p>
+            <a href="meetings.html" class="inline-block bg-[#003366] text-white px-10 py-4 rounded-2xl text-lg font-medium hover:bg-[#002244]">
+                View All Meetings →
+            </a>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-slate-900 text-white text-center">
-        <h2 class="text-4xl font-bold mb-4">Contact the Webmaster</h2>
-        <p class="mb-8">upaa.district17@gmail.com</p>
-        <form action="https://formsubmit.co/upaa.district17@gmail.com" method="POST" class="max-w-lg mx-auto px-6 space-y-4">
-            <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 rounded">
-            <input type="email" name="email" placeholder="Your Email" required class="w-full p-4 rounded">
-            <textarea name="message" placeholder="Message or flyer info" rows="5" required class="w-full p-4 rounded"></textarea>
-            <button type="submit" class="w-full bg-white text-slate-900 py-4 rounded font-medium">Send Message</button>
-        </form>
-    </section>
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white/70 py-8 text-center text-sm">
+        © 2026 UPAA District 17 • Alcoholics Anonymous<br>
+        24/7 Helpline: <a href="tel:906-774-0900" class="underline">906-774-0900</a><br>
+        Webmaster: <a href="mailto:upaa.district17@gmail.com" class="underline">upaa.district17@gmail.com</a>
+    </footer>
 
 </body>
 </html>
