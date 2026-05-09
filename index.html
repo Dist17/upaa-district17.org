@@ -8,12 +8,19 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
-        .hero-bg { 
-            background: linear-gradient(180deg, #001a33 0%, #000d1a 100%); 
+        .hero-bg {
+            background: linear-gradient(180deg, #001a33 0%, #000d1a 100%);
             position: relative;
             overflow: hidden;
         }
-        .section-header { font-family: 'Playfair Display', sans-serif; }
+        .stars { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+        @keyframes twinkle { 0% { opacity: 0.4; } 100% { opacity: 1; } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -30,7 +37,7 @@
                     </div>
                 </div>
                 <div class="flex gap-x-8 text-sm font-medium">
-                    <a href="index.html" class="nav-link font-semibold text-[#003366]">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                     <a href="meetings.html" class="nav-link">Meetings</a>
                     <a href="minutes.html" class="nav-link">Meeting Minutes</a>
                     <a href="contact.html" class="nav-link">Contact</a>
@@ -41,21 +48,45 @@
 
     <!-- HERO -->
     <header class="hero-bg h-screen flex items-center text-white text-center relative">
-        <div class="max-w-4xl mx-auto px-6">
+        <div id="stars-container" class="stars"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
             <h1 class="text-6xl md:text-7xl font-bold mb-6">UPAA DISTRICT 17</h1>
-            <p class="text-2xl md:text-3xl mb-10">Alcoholics Anonymous • Upper Peninsula of Michigan</p>
-            <p class="text-xl mb-12">24/7 AA Helpline: <a href="tel:906-774-0900" class="underline hover:text-white">906-774-0900</a></p>
+            <p class="text-2xl md:text-3xl mb-12">Alcoholics Anonymous • Upper Peninsula of Michigan</p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="meetings.html" class="bg-white text-[#003366] px-8 py-4 rounded-2xl font-semibold hover:bg-slate-100">
-                    View Meetings
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <a href="meetings.html" class="bg-white text-[#003366] py-4 px-6 rounded-2xl font-semibold hover:bg-slate-100">
+                    Meetings
                 </a>
-                <a href="contact.html" class="border border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white/10">
-                    Contact Us
+                <a href="minutes.html" class="bg-white text-[#003366] py-4 px-6 rounded-2xl font-semibold hover:bg-slate-100">
+                    Minutes
+                </a>
+                <a href="contact.html" class="bg-white text-[#003366] py-4 px-6 rounded-2xl font-semibold hover:bg-slate-100">
+                    Contact
+                </a>
+                <a href="tel:906-774-0900" class="bg-[#003366] border border-white text-white py-4 px-6 rounded-2xl font-semibold hover:bg-[#002244]">
+                    Call Helpline
                 </a>
             </div>
         </div>
     </header>
+
+    <script>
+        function createStars() {
+            const container = document.getElementById('stars-container');
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                container.appendChild(star);
+            }
+        }
+        window.onload = createStars;
+    </script>
 
 </body>
 </html>
