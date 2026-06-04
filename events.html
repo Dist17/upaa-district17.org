@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AA Events - UPAA District 17</title>
+    <title>AA Events & Flyers - UPAA District 17</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
         .section-header { font-family: 'Playfair Display', sans-serif; }
+        .flyer-thumb {
+            transition: transform 0.3s ease;
+        }
+        .flyer-thumb:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -35,16 +42,27 @@
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-6 py-16">
-        <h1 class="section-header text-5xl font-bold text-[#003366] text-center mb-10">AA Events & Flyers</h1>
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <h1 class="section-header text-5xl font-bold text-[#003366] text-center mb-4">AA Events & Flyers</h1>
+        <p class="text-center text-slate-600 mb-12">Upcoming events and announcements from District 17</p>
 
-        <!-- Current Flyer -->
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden mb-12">
-            <img src="upaa-flyer.png" alt="District 17 Flyer" class="w-full">
+        <!-- Flyers Gallery -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Flyer 1 -->
+            <div class="bg-white rounded-3xl shadow overflow-hidden">
+                <img src="upaa-flyer.png" alt="District Website Launch Flyer" class="w-full flyer-thumb">
+                <div class="p-6">
+                    <h3 class="font-semibold text-lg mb-2">New District Website Launch</h3>
+                    <p class="text-slate-600 text-sm">May 2026</p>
+                </div>
+            </div>
+
+            <!-- Add more flyers here by copying the block above -->
+
         </div>
 
-        <div class="text-center">
-            <p class="text-lg mb-6">To submit a new event or flyer, please use the contact form below or email us directly.</p>
+        <div class="text-center mt-16">
             <a href="contact.html" class="inline-block bg-[#003366] text-white px-10 py-4 rounded-2xl font-semibold hover:bg-[#002244]">
                 Submit New Event or Flyer
             </a>
