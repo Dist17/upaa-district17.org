@@ -9,8 +9,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
         .section-header { font-family: 'Playfair Display', sans-serif; }
-        .flyer-card { transition: all 0.3s ease; }
-        .flyer-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .flyer-card {
+            transition: all 0.3s ease;
+        }
+        .flyer-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -38,43 +43,4 @@
     </nav>
 
     <div class="max-w-6xl mx-auto px-6 py-16">
-        <h1 class="section-header text-5xl font-bold text-[#003366] text-center mb-12">AA Events & Flyers</h1>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <!-- Website Launch Flyer -->
-            <div class="flyer-card bg-white rounded-3xl shadow overflow-hidden">
-                <a href="upaa-flyer.png" target="_blank">
-                    <img src="upaa-flyer.png" alt="New Website Announcement" class="w-full">
-                </a>
-                <div class="p-6 text-center">
-                    <h3 class="font-semibold text-xl">New District Website Launch</h3>
-                </div>
-            </div>
-
-            <!-- Traveling District Schedule -->
-            <div class="flyer-card bg-white rounded-3xl shadow overflow-hidden">
-                <a href="2026 TRAVELING DISTRICT MEETING SCHEDULE.docx" target="_blank">
-                    <div class="h-80 bg-slate-100 flex items-center justify-center border-b">
-                        <p class="text-2xl font-semibold text-slate-600 text-center px-8">
-                            2026 Traveling District<br>Meeting Schedule
-                        </p>
-                    </div>
-                </a>
-                <div class="p-6 text-center">
-                    <h3 class="font-semibold text-xl">2026 Traveling District Meetings</h3>
-                    <p class="text-slate-600 mt-1">4th Monday of each month @ 5:00 PM</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="text-center mt-16">
-            <a href="contact.html" class="inline-block bg-[#003366] text-white px-10 py-4 rounded-2xl font-semibold hover:bg-[#002244]">
-                Submit New Event or Flyer
-            </a>
-        </div>
-    </div>
-
-</body>
-</html>
+        <h1 class="section-header text-5xl font-bold text-[#003366] text-center mb-12">AA
