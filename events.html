@@ -9,13 +9,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
         .section-header { font-family: 'Playfair Display', sans-serif; }
-        .flyer-thumb {
-            transition: all 0.3s ease;
-        }
-        .flyer-thumb:hover {
-            transform: scale(1.06);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
+        .flyer-card { transition: all 0.3s ease; }
+        .flyer-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -42,25 +37,34 @@
         </div>
     </nav>
 
-    <div class="max-w-5xl mx-auto px-6 py-16">
+    <div class="max-w-6xl mx-auto px-6 py-16">
         <h1 class="section-header text-5xl font-bold text-[#003366] text-center mb-12">AA Events & Flyers</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-            <!-- Flyer 1 -->
-            <div class="text-center">
+            <!-- Website Launch Flyer -->
+            <div class="flyer-card bg-white rounded-3xl shadow overflow-hidden">
                 <a href="upaa-flyer.png" target="_blank">
-                    <img src="upaa-flyer.png" alt="New Website Announcement" class="flyer-thumb rounded-3xl shadow mx-auto">
+                    <img src="upaa-flyer.png" alt="New Website Announcement" class="w-full">
                 </a>
-                <p class="mt-4 font-medium">New District Website Launch</p>
+                <div class="p-6 text-center">
+                    <h3 class="font-semibold text-xl">New District Website Launch</h3>
+                </div>
             </div>
 
-            <!-- Flyer 2 -->
-            <div class="text-center">
-                <a href="2026-traveling-schedule.png" target="_blank">
-                    <img src="2026-traveling-schedule.png" alt="2026 Traveling District Schedule" class="flyer-thumb rounded-3xl shadow mx-auto">
+            <!-- Traveling District Schedule -->
+            <div class="flyer-card bg-white rounded-3xl shadow overflow-hidden">
+                <a href="2026 TRAVELING DISTRICT MEETING SCHEDULE.docx" target="_blank">
+                    <div class="h-80 bg-slate-100 flex items-center justify-center border-b">
+                        <p class="text-2xl font-semibold text-slate-600 text-center px-8">
+                            2026 Traveling District<br>Meeting Schedule
+                        </p>
+                    </div>
                 </a>
-                <p class="mt-4 font-medium">2026 Traveling District Meeting Schedule</p>
+                <div class="p-6 text-center">
+                    <h3 class="font-semibold text-xl">2026 Traveling District Meetings</h3>
+                    <p class="text-slate-600 mt-1">4th Monday of each month @ 5:00 PM</p>
+                </div>
             </div>
 
         </div>
