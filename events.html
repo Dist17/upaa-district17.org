@@ -8,73 +8,51 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
-        .section-header { font-family: 'Playfair Display', sans-serif; }
-        .flyer-card {
-            transition: all 0.3s ease;
-        }
-        .flyer-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
-    <!-- Navbar -->
     <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center gap-x-4">
-                    <img src="logo.png" alt="UPAA District 17 Logo" class="w-16 h-16 object-contain">
+                    <img src="logo.png" alt="Logo" class="w-16 h-16 object-contain">
                     <div>
                         <h1 class="text-2xl font-semibold text-[#003366]">UPAA District 17</h1>
                         <p class="text-xs text-slate-500">Upper Peninsula • Area 74</p>
                     </div>
                 </div>
                 <div class="flex gap-x-6 text-sm font-medium">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="meetings.html" class="nav-link">Meetings</a>
-                    <a href="minutes.html" class="nav-link">Meeting Minutes</a>
-                    <a href="events.html" class="nav-link font-semibold text-[#003366]">AA Events</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="index.html">Home</a>
+                    <a href="meetings.html">Meetings</a>
+                    <a href="minutes.html">Minutes</a>
+                    <a href="events.html" class="font-semibold text-[#003366]">AA Events</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="max-w-6xl mx-auto px-6 py-16">
-        <h1 class="section-header text-5xl font-bold text-[#003366] text-center mb-12">AA Events & Flyers</h1>
+    <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+        <h1 class="text-5xl font-bold text-[#003366] mb-12">AA Events & Flyers</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="space-y-12">
 
-            <!-- Website Announcement Flyer -->
-            <div class="flyer-card bg-white rounded-3xl shadow overflow-hidden">
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">New District Website Launch</h2>
                 <a href="upaa-flyer.png" target="_blank">
-                    <img src="upaa-flyer.png" alt="New Website Announcement" class="w-full">
+                    <img src="upaa-flyer.png" alt="Website Flyer" class="mx-auto rounded-3xl shadow-lg">
                 </a>
-                <div class="p-6 text-center">
-                    <h3 class="font-semibold text-xl">New District Website Launch</h3>
-                </div>
             </div>
 
-            <!-- Traveling District Schedule - Centered -->
-            <div class="flyer-card bg-white rounded-3xl shadow p-10 flex flex-col items-center justify-center text-center min-h-[420px]">
-                <h3 class="font-semibold text-2xl mb-6 text-[#003366]">2026 Traveling District Meetings</h3>
-                <p class="text-lg mb-8">4th Monday of each month @ 5:00 PM</p>
-                <p class="text-slate-600 mb-8">(2 meetings per year at each location)</p>
-                
-                <a href="2026travel.docx" 
+            <div>
+                <h2 class="text-2xl font-semibold mb-4">2026 Traveling District Meeting Schedule</h2>
+                <a href="2026travel.docx" target="_blank" 
                    class="inline-block bg-[#003366] text-white px-10 py-4 rounded-2xl font-semibold hover:bg-[#002244]">
-                    📥 Download Full Schedule
+                    📥 Download Schedule (Word)
                 </a>
             </div>
 
-        </div>
-
-        <div class="text-center mt-16">
-            <a href="contact.html" class="inline-block bg-[#003366] text-white px-10 py-4 rounded-2xl font-semibold hover:bg-[#002244]">
-                Submit New Event or Flyer
-            </a>
         </div>
     </div>
 
